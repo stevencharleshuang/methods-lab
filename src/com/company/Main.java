@@ -8,6 +8,9 @@ public class Main {
 
         System.out.println(maxOfTwoNumbers(1, 2));
         System.out.println(maxOfThree(1, 2, 3));
+        System.out.println(isCharacterAVowel("b"));
+        System.out.println(numArgs("1", "2", "3", "4"));
+        System.out.println(reverseString("Reverse this string"));
     }
 
     public static void helloWorld() {
@@ -31,13 +34,28 @@ public class Main {
             return a;
         }
     }
-    
+
 //    Write a method, isCharacterAVowel(), that takes a character (i.e., a string of length 1) and returns true if it's a vowel and false otherwise.
-//
+    public static boolean isCharacterAVowel(String a) {
+        String vowels = "AEIOUaeiou";
+        return vowels.contains(a);
+    }
+
 //    Write a method that returns the number of arguments passed to it when called.
-//
+    public static int numArgs(String... args) {
+        return args.length;
+    }
 //    Define a method, reverseString(), that computes the reversal of a string. For example, reverseString("jag testar") should return the string "ratset gaj".
-//
+
+    public static String reverseString(String str) {
+        String reversed = "";
+
+        for (int i = str.length() - 1; i >= 0; i -= 1) {
+            reversed += str.charAt(i);
+        }
+
+        return reversed;
+    }
 //    Bonus
 //
 //    Write a method, findLongestWord(), that takes an array of words and returns the length of the longest one.
